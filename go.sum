@@ -1,0 +1,4 @@
+github.com/tjgq/ticker v0.0.0-20140913211110-8b4870134629 h1:8D/3TnZoDVrg04njlEpU6hyEb9dEd8uD7GhtTd8jFGQ=
+github.com/tjgq/ticker v0.0.0-20140913211110-8b4870134629/go.mod h1:h1gytvaaDPqPR0zMPUU6XZnneqVVBG1ELYHGZ5Ybw6o=
+gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7 h1:uRGJdciOHaEIrze2W8Q3AKkepLTh2hOroT7a+7czfdQ=
+gopkg.in/tomb.v1 v1.0.0-20141024135613-dd632973f1e7/go.mod h1:dt/ZhP58zS4L8KSrWDmTeBkI65Dw0HsyUHuEVlX15mw=
