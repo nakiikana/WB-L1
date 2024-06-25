@@ -36,7 +36,6 @@ func newPool(max int, task chan interface{}, wg *sync.WaitGroup) Pool {
 }
 
 func (p *Pool) Read() {
-	var wg sync.WaitGroup
 	for _, v := range p.pool {
 		go func(w Worker) {
 			defer w.wg.Done()
@@ -45,7 +44,6 @@ func (p *Pool) Read() {
 			}
 		}(v)
 	}
-	wg.Wait()
 }
 
 func GracefulSlaughter(ch chan interface{}, wg *sync.WaitGroup) {
@@ -63,6 +61,9 @@ func main() {
 
 	var wg sync.WaitGroup
 	task := make(chan interface{})
+	if len(os.Args) < 2 {
+		log.Fatalln("You forgot to enter number of workers :C")
+	}
 	workerNum, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		log.Fatalln("Could not read number of workers from the command line: ", err)
