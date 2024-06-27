@@ -10,6 +10,7 @@ import (
 	"os"
 )
 
+// big.Int вмещает в себя числа, которые больше 2^20 степени.
 func Calculate(a, b *big.Int, operator string) *big.Int {
 	res := new(big.Int)
 	switch operator {
@@ -31,6 +32,7 @@ func main() {
 	if len(os.Args) < 4 {
 		log.Fatalln("You should consequently enter a, an operator and b")
 	}
+	//После считывания двух big.Int и оператора из консоли вызываем функцию для осуществления вычислений.
 	a, ok := new(big.Int).SetString(os.Args[1], 10)
 	if !ok {
 		log.Fatalln("Could not read the first operand")
